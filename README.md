@@ -61,3 +61,6 @@ I would also like to thank the creators of Udemy for providing a platform that e
 Join me on this exciting journey of mastering Data Structures and Algorithms using C and C++. Let's learn together, grow together, and build a strong foundation in this crucial field of computer science. Feel free to explore the repository and make the most out of the code snippets, notes, and projects provided.
 
 Happy coding! 🚀
+
+## Author 
+- [@arpy8](https://github.com/arpy8)
