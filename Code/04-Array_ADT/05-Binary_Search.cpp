@@ -1,31 +1,68 @@
 #include <iostream>
 using namespace std;
 
-int main()
+struct Array
 {
-    int num, l=0, h=9, mid, A[] = { 12,23,34,45,54,62,73,85,96,99 };
-    for (int i=0;i<10;i++)
-    {
-        cout << A[i] << " ";
-    }
-    cout << "\nEnter a number: ";
-    cin >> num;
+    int A[20];
+    int size;
+    int length;
+};
 
+void Display(struct Array arr)
+{
+    int i;
+    printf("\nElements are\n");
+    for (i = 0; i < arr.length; i++)
+        printf("%d ", arr.A[i]);
+}
+
+void swap(int* x, int* y)
+{
+    int temp = *x;
+    *x = *y;
+    *y = temp;
+}
+
+int BinarySearch1(Array arr, int key)
+{
+    int l, mid, h;
+    l = 0;
+    h = arr.length - 1;
     while (l <= h)
     {
         mid = (l + h) / 2;
-
-        if (num == A[mid])
-        {
-            cout << "Found at: " << mid;
-            return 0;
-        }
-
-        else if (num < A[mid])
+        if (key == arr.A[mid])
+            return mid;
+        else if (key < arr.A[mid])
             h = mid - 1;
-
         else
             l = mid + 1;
     }
-    cout << "Element not found."; 
+    return -1;
+}
+
+int BinarySearch2(int a[], int l, int h, int key)
+{
+    int mid = 0;
+    if (l <= h)
+    {
+        mid = (l + h) / 2;
+        if (key == a[mid])
+            return mid;
+        else if (key < a[mid])
+            return BinarySearch2(a, l, mid - 1, key);
+        else 
+            return BinarySearch2(a, mid + 1, h, key);
+    }
+    return -1;
+}
+
+
+int main()
+{
+    struct Array arr1 = { {2,3,9,16,18,21,28,32,35},10,9 };
+    int arr2[10] = { 2,3,9,16,18,21,28,32,35 };
+    printf("Using iteration : %d\nUsing recursion : %d", BinarySearch1(arr1, 16), BinarySearch2(arr1.A, 0, 9, 16));
+    Display(arr1);
+    return 0;
 }
