@@ -23,6 +23,7 @@ void swap(int* x, int* y)
     *y = temp;
 }
 
+// using iteration
 int BinarySearch1(Array arr, int key)
 {
     int l, mid, h;
@@ -41,6 +42,8 @@ int BinarySearch1(Array arr, int key)
     return -1;
 }
 
+
+// using recursion
 int BinarySearch2(int a[], int l, int h, int key)
 {
     int mid = 0;
@@ -51,7 +54,7 @@ int BinarySearch2(int a[], int l, int h, int key)
             return mid;
         else if (key < a[mid])
             return BinarySearch2(a, l, mid - 1, key);
-        else 
+        else
             return BinarySearch2(a, mid + 1, h, key);
     }
     return -1;
