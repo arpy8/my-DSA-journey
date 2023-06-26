@@ -65,7 +65,7 @@ int main()
 {
     struct Array arr1 = { {2,3,9,16,18,21,28,32,35},10,9 };
     int arr2[10] = { 2,3,9,16,18,21,28,32,35 };
-    printf("Using iteration : %d\nUsing recursion : %d", BinarySearch1(arr1, 16), BinarySearch2(arr1.A, 0, 9, 16));
+    printf("Using iteration : %d\nUsing recursion : %d", BinarySearch1(arr1, 16), BinarySearch2(arr1.A, 0, arr.length, 16));
     Display(arr1);
     return 0;
 }
