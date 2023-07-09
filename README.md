@@ -39,7 +39,7 @@ To make the most of this repository, follow these steps:
 1. Clone the repository to your local machine using the following command:
 
 ```bash
-git clone https://github.com/arpy8/my-DSA-journey
+git clone https://github.com/arpitsalt/My_DSA_Journey
 ```
 
 2. Explore the different directories to access code snippets, notes and resources.
@@ -63,4 +63,4 @@ Join me on this exciting journey of mastering Data Structures and Algorithms usi
 Happy coding! 🚀
 
 ## Author 
-- [@arpy8](https://github.com/arpy8)
+- [@arpy8](https://github.com/arpitsalt)
